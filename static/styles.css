@@ -1,0 +1,645 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    line-height: 1.6;
+    height: 100vh;
+}
+
+.container
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1
+{
+    text-align: center;
+    font-size: 30px;
+    color: #123C69;
+}
+
+h3
+{
+    color: #123C69;
+}
+
+
+
+/* navbar */
+
+.navbar
+{
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    color: rgba(9,30,52,0.8);
+}
+
+.navbar ul
+{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+}
+
+.navbar ul li
+{
+    margin: 0 15px;
+    padding-top: 0;
+}
+
+#navbutton
+{
+    text-decoration: none;
+    color: #fff;
+}
+
+#navbutton:hover
+{
+    color: #c5c5c5;
+}
+
+#arrow
+{
+    color: #000;
+}
+
+#arrow:hover
+{
+    color: rgba(90,185,234,1);
+    text-decoration: none;
+}
+
+section
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+section h1
+{
+    font-size: 50px;
+}
+
+section p
+{
+    font-size: 20px;
+}
+
+
+/* project boxes
+credit: https://www.youtube.com/watch?v=JJkuGvfFKOw&t=54s */
+
+.container .box
+{
+    position: relative;
+    width: 330px;
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    margin: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.container .box .icon
+{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: 700;
+    transition: .9s;
+}
+
+.container .box .icon
+{
+    box-shadow: 0 0 0 0 rgba(18,60,105);
+    background: rgba(18,60,105);
+}
+
+.container .box:hover .icon
+{
+    box-shadow: 0 0 0 440px rgba(18,60,105);
+    background: rgba(18,60,105);
+}
+
+.container .box .content
+{
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.container .box:hover .content
+{
+    color: #fff;
+}
+
+.container .box:hover .content h3
+{
+    color: #fff;
+}
+
+.container .box .content h3
+{
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.container .box .content p
+{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+.container .box .content a
+{
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-left: 65px;
+    margin-right: 65px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .box .content a:hover
+{
+    background: #c5c5c5;
+}
+
+
+/* Timeline
+credit: https://www.youtube.com/watch?v=X6aMWDDJlJg&ab_channel=OnlineTutorials */
+
+.timeline
+{
+    position: relative;
+    margin: 50px auto;
+    padding: 40px 0;
+    width: 1000px;
+    box-sizing: border-box;
+}
+
+.timeline::before
+{
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 97%;
+    background: #c5c5c5;
+}
+
+.timeline ul
+{
+    margin: 0;
+    padding: 0;
+
+}
+
+.timeline ul li
+{
+    list-style: none;
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+.timeline ul li:nth-child(odd)
+{
+    float: left;
+    text-align: right;
+    clear: both;
+}
+
+.timeline ul li:nth-child(even)
+{
+    float: right;
+    text-align: left;
+    clear: both;
+}
+
+.content
+{
+    padding-bottom: 20px;
+
+}
+
+.timeline ul li:nth-child(odd)::before
+{
+    content: '';
+    position: absolute;
+    top: 34px;
+    right: -6px;
+    width: 10px;
+    height: 10px;
+    background: none;
+    border-radius: 50%;
+    box-shadow: none;
+}
+
+.timeline ul li:nth-child(even)::before
+{
+    content: '';
+    position: absolute;
+    top: 34px;
+    left: -4px;
+    width: 10px;
+    height: 10px;
+    background: none;
+    border-radius: 50%;
+    box-shadow: none;
+}
+
+.timeline ul li h3
+{
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    color: rgba(18,60,105,1);
+}
+
+.timeline ul li p
+{
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+.timeline ul li .time h4
+{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+
+}
+
+.timeline ul li:nth-child(odd) .time
+{
+    position: absolute;
+    top: 22px;
+    right: -150px;
+    margin: 0;
+    padding: 8px 16px;
+    background: rgba(18,60,105,1);
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(18,60,105,0.3);
+}
+
+.timeline ul li:nth-child(even) .time
+{
+    position: absolute;
+    top: 22px;
+    left: -150px;
+    margin: 0;
+    padding: 8px 16px;
+    background: rgba(18,60,105,1);
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(18,60,105,0.3);
+}
+
+
+/* timeline effects
+credit: https://codepen.io/tutsplus/pen/QNeJgR */
+
+.timeline ul li div
+{
+  visibility: hidden;
+  opacity: 0;
+  transition: all .8s ease-in-out;
+}
+
+.timeline ul li:nth-child(even) div
+{
+  transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(odd) div
+{
+  transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li::before {
+  transition: background .8s ease-in-out;
+}
+
+.timeline ul li.in-view::before {
+  background: rgba(90,185,234,1);
+  box-shadow: 0 0 0 3px rgba(90,185,234,0.2);
+}
+
+.timeline ul li.in-view div
+{
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* Media */
+
+@media (max-width: 1000px)
+{
+    .timeline
+    {
+    width: 100%;
+    padding-bottom: 0px;
+    }
+}
+
+@media (max-width: 767px)
+{
+    body
+    {
+        line-height: 1.6;
+        height: 100vh;
+        font-size: 15px;
+    }
+
+    h1
+    {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .timeline
+    {
+        width: 100%;
+        padding: 0;
+    }
+
+    section
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+    section p
+    {
+        font-size: 15px;
+    }
+
+    .navbar ul li
+    {
+        padding: 2px;
+        margin: 0;
+    }
+
+    .timeline ul li
+    {
+        position: relative;
+        padding: 20px 40px;
+    }
+
+    .timeline ul li p
+    {
+        font-size: 13px;
+    }
+
+    .timeline ul li h3
+    {
+        font-size: 15px;
+    }
+
+    .timeline ul li .time h4
+    {
+        font-size: 10px;
+    }
+
+    .timeline ul li:nth-child(odd)
+    {
+        float: right;
+        text-align: left;
+        width: 95%;
+        padding-left: 50px;
+        padding-bottom: 50px;
+    }
+
+    .timeline ul li:nth-child(even)
+    {
+        float: right;
+        text-align: left;
+        width: 95%;
+        padding-left: 50px;
+        padding-bottom: 50px;
+    }
+
+    .timeline ul li:nth-child(even) div
+    {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .timeline ul li:nth-child(odd) div
+    {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .timeline::before
+    {
+        left: 20px;
+    }
+
+    .timeline ul li:nth-child(odd)::before
+    {
+        top: -18px;
+        left: -2px;
+    }
+
+    .timeline ul li:nth-child(1)::before
+    {
+        top: 25px;
+    }
+
+    .timeline ul li:nth-child(even)::before
+    {
+        top: -18px;
+        left: -2px;
+    }
+
+    .timeline ul li:nth-child(11)::before
+    {
+        top: 25px;
+    }
+
+    .timeline ul li:nth-child(odd) .time
+    {
+        top: -30px;
+        right: auto;
+        left: 50px;
+        text-align: center;
+    }
+
+    .timeline ul li:nth-child(even) .time
+    {
+        top: -30px;
+        right: auto;
+        left: 50px;
+        text-align: center;
+    }
+    .container .box .content p
+    {
+        font-size: 13px;
+    }
+
+    .container .box .content h3
+    {
+        font-size: 15px;
+    }
+
+    .container .box .content a
+    {
+        font-size: 13px;
+    }
+}
+
+/* Social media buttons
+credit: https://codepen.io/codename065/pen/doyRNw */
+
+a.btn-social,
+.btn-social
+{
+    border-radius: 50%;
+    color: #ffffff !important;
+    display: inline-block;
+    height: 54px;
+    line-height: 54px;
+    margin: 8px 4px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .3s;
+    webkit-transition: background-color .3s;
+    width: 54px;
+}
+
+.btn-social .fa,.btn-social i
+{
+    backface-visibility: hidden;
+    moz-backface-visibility: hidden;
+    ms-transform: scale(1);
+    o-transform: scale(1);
+    transform: scale(1);
+    transition: all .25s;
+    webkit-backface-visibility: hidden;
+    webkit-transform: scale(1);
+    webkit-transition: all .25s;
+}
+
+.btn-social:hover,.btn-social:focus
+{
+    color: #fff;
+    outline: none;
+    text-decoration: none;
+}
+
+.btn-social:hover .fa,.btn-social:focus .fa,.btn-social:hover i,.btn-social:focus i
+{
+    ms-transform: scale(1.3);
+    o-transform: scale(1.3);
+    transform: scale(1.3);
+    webkit-transform: scale(1.3);
+}
+
+.btn-social.btn-xs
+{
+    font-size: 9px;
+    height: 24px;
+    line-height: 13px;
+    margin: 6px 2px;
+    width: 24px;
+}
+
+.btn-social.btn-sm
+{
+    font-size: 13px;
+    height: 36px;
+    line-height: 18px;
+    margin: 6px 2px;
+    width: 36px;
+}
+
+.btn-social.btn-lg
+{
+    font-size: 22px;
+    height: 72px;
+    line-height: 40px;
+    margin: 10px 6px;
+    width: 72px;
+}
+
+.btn-facebook
+{
+    background-color: #3b5998;
+}
+
+.btn-facebook:hover
+{
+    background-color: #4c70ba;
+}
+
+.btn-github
+{
+    background-color: #4183c4;
+}
+
+.btn-github:hover
+{
+    background-color: #689cd0;
+}
+
+.btn-linkedin
+{
+    background-color: #0976b4;
+}
+
+.btn-linkedin:hover
+{
+    background-color: #0b96e5;
+}
+
+.btn-email
+{
+    background-color: rgba(18,60,105);
+}
+.btn-email:hover
+{
+    background-color: rgba(18,60,105,0.8);
+}

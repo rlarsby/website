@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+
+    <!-- Boostrap link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Link to css stylesheet -->
+    <link href=/static/styles.css rel="stylesheet" type="text/css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Smooth scroll credit: https://github.com/cferdinandi/smooth-scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+
+    <script>
+
+    // JS for animations, credit: https://codepen.io/tutsplus/pen/QNeJgR
+    document.addEventListener('DOMContentLoaded', function() {
+
+        'use strict';
+
+        // define variables
+        var items = document.querySelectorAll(".timeline li");
+
+        // check if an element is in viewport
+        // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+        function isElementInViewport(el) {
+          var rect = el.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+
+        function callbackFunc() {
+          for (var i = 0; i < items.length; i++) {
+            if (isElementInViewport(items[i])) {
+              items[i].classList.add("in-view");
+            }
+          }
+        }
+
+        // listen for events
+        window.addEventListener("load", callbackFunc);
+        window.addEventListener("resize", callbackFunc);
+        window.addEventListener("scroll", callbackFunc);
+
+      })();
+    </script>
+
+    <title>Rasmus' Webpage</title>
+
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgba(9,30,52,0.8);">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#home" id="navbutton">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#timeline" id="navbutton">Timeline</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects" id="navbutton">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact" id="navbutton">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Welcome page -->
+    <section id="home">
+      <div><img src="/other/image18.png"></div>
+      <br>
+      <b id="hi">Hi, I'm Rasmus Larsby!</b>
+      <br>
+      <p>I made this website so you can get to know me a little better &#128522</p>
+      <br>
+      <div><a href="#timeline" id="arrow"><span style='font-size:50px;'>&#8595;</span></a></div>
+    </section>
+
+    <h1 id="timeline"></h1>
+
+    <!-- Timeline -->
+    <div class="timeline">
+      <ul>
+        <li>
+          <div class="content">
+            <h3>Welcome!</h3>
+            <p>This website came to life as my final project in the edX course 'CS50 Introduction to Computer Science'.
+            If you keep scrolling through this timeline you will see what I have been doing throughout the years.
+            Have a look at some of my completed projects and general information about myself. Enjoy!</p>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h3>M.Sc. in Engineering, Design<br>and Product Development</h3>
+            <p>I am pursuing a M.Sc degree in Engineering, Design and Product Development at Linköping University
+            with a master's in management. My master's profile consists of subjects regarding project management, innovation and entrepreneurship.
+            I am set to graduate in June 2021 after completion of my current master's thesis.
+            </p>
+          </div>
+          <div class="time">
+            <h4>2016 - <i>Present</i></h4>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h3>Academic Mentor</h3>
+            <p>I got selected to work as an academic mentor for new students at my university.
+            The first group was of roughly 50 new international master's students.
+            I held lectures on how to succeed with their studies, what is expected from them and
+            introduced them to the university in general. The second group was a group of 38 first year students of whom I had similar
+            responsibilites but also served as a social mentor.</p>
+          </div>
+          <div class="time">
+            <h4>Fall of 2020</h4>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h3>Camping Receptionist</h3>
+            <p>Beyond my daily responsibilites as a receptionist I aided the camp manager with administration
+            such as scheduling, planning, ordering supplies, and much more.
+            Took upon myself to introduce and train new employees according to their roles and how to be service-minded.</p>
+          </div>
+          <div class="time">
+            <h4>Summer of 2020</h4>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h3>Erasmus Exchange</h3>
+            <p>As part of my master's studies I went on an Erasmus exchange semester to Lisbon. I studied at <i>Instituto Superior Técnico</i> which is known to be
+            one of the top engineering-universities in Portugal. Beyond attending class, enjoying the portuguese culture and weather, I surfed alot.</p>
+          </div>
+          <div class="time">
+            <h4>2019 - 2020</h4>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h3>Teaching Assistant</h3>
+            <p>Taught in a course called Manufacturing Technology.
+            I held practical lectures on how to manage and program the industry robot <i>Motoman MH5 / DX100</i>. The goal was to give engineering students a
+            grasp of how these robots work and how they can be used.</p>
+          </div>
+          <div class="time">
+            <h4>2019 - 2020</h4>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h3>Project Leader</h3>
+            <p>I was selected to be the project leader for a team of 8 students throughout our bachelor's thesis project. The project's main goal was to
+            create a concept and build a prototype of an interactive IoT-game for children.</p>
+          </div>
+          <div class="time">
+            <h4>Spring of 2019</h4>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h3>Marina & Tourist Host</h3>
+            <p>My role consisted of maritime and tourist tasks during the summers in Nynäshamn's marina, which is one of Sweden's biggest marinas for leisure boats.
+            Took extra responsibilities of leading summer workers, developing my skills in service, administration, and leadership.</p>
+          </div>
+          <div class="time">
+            <h4>2017 - 2019</h4>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h3>Refrigerator Technician</h3>
+            <p>I did workshop and warehouse tasks with refrigerators at <i>MarkisCity</i> in Nynäshamn.
+            The experience enhanced my mechanical and logistical problem solving skills and allowed me to developed a systematic working habit.</p>
+          </div>
+          <div class="time">
+            <h4>2015 - 2016</h4>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h3>Camp Leader</h3>
+            <p>My first job was as a sailing and canoeing instructor for kids during summer camps at Nynäshamn's Yacht Club.
+            Growing up in Nynäshamn and working here created a strong bond and love for the ocean.</p>
+          </div>
+          <div class="time">
+            <h4>2010 - 2014</h4>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h3>Quick word about me</h3>
+            <p>My sparetime consists of practicing extreme
+            sports such as snowboarding, surfing, downhill and wakeboarding. If I am not pursuing an adrenaline rush I am
+            on the mats training combat sports, namely Submission Wrestling and Brazilian Jiu Jitsu.</p>
+          </div>
+        </li>
+        <div style="clear: both;"></div>
+      </ul>
+    </div>
+
+    <!-- Projects -->
+    <br><h1 id="projects">Projects</h1></br>
+    <div class="container">
+        <div class="box">
+            <div class="icon">P1</div>
+            <br>
+            <div class="content">
+                <h3>Master's Thesis</h3>
+                <p>I am currently writing my master's thesis. The scope of the project is to analyze a software and evaluate it from
+                the perspective of knowledge management. The software is used to store and publish data regarding the availability, reliability and maintenance
+                of large complex technological products. The purpose is to analyze how firms can use
+                the software to maximize knowledge sharing and knowledge creation.</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon">P2</div>
+            <br>
+            <div class="content">
+                <h3>This Website</h3>
+                <p>As a side-project I decided to expand my understanding of computer science. This led me into enrolling in the edX course
+                <i>CS50x Introduction to Compure Science</i>.  I decided to build this website as my final project in the course.
+                By clicking the button below you can visit my GitHub where I have uploaded the code I wrote to build this website as well as some other code I have written.</p>
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon">P3</div>
+            <br>
+            <div class="content">
+                <h3>Interactive IoT Game</h3>
+                <p>My bachelor's thesis was to participate in a project that had the purpose to design a concept and build a prototype of an
+                IoT-game for children. I got chosen to be the project leader for my team of 8 students and drive the project forward. The IoT-game used sensors and
+                arduinos to show the potential of IoT in an interactive and playful manner. By clicking the button below you can view a PDF of the project.</p>
+                <a href="/other/iot.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon">P4</div>
+            <br>
+            <div class="content">
+                <h3>Personal Rapid Transit Visualization</h3>
+                <p>This project used CAD to design a personal rapid transit (PRT). The PRT was imported into Unreal Engine 4
+                where the creation of an environment took place which visualized the user expereience of the PRT. During the project Adobe Illustrator,
+                Fusion 360, Unreal Engine 4, OBX, Resolve and Blender were used to reach the end-result.</p>
+                <br>
+                <a href="https://youtu.be/_mv1tmYaHgg" target="_blank" rel="noopener noreferrer">YouTube</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon">P5</div>
+            <br>
+            <div class="content">
+                <h3>A Luxurious Teacup</h3>
+                <p>The purpose of this project was to come up with an idea of a product, that normally does not contain wooden materials, and combine wood and some
+                other material in the product. The result was a luxurious teacup where the handle was made out of wood instead of porcelain. Beyond contributing
+                to the concept I designed the teacup in CAD.</p>
+                <a href="/other/kopp.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+            </div>
+        </div>
+    </div>
+    </br>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h3>Contact</h3>
+      <br>
+      <div class="centered-icons">
+      <a href="mailto:rasmus.larsby@hotmail.se" target="_blank" class="btn-social btn-email"><i class="fa fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/rasmus-larsby/" target="_blank" class="btn-social btn-linkedin"><i class="fa fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/rasmus.larsby/" target="_blank" class="btn-social btn-facebook"><i class="fa fa-facebook"></i></a>
+      <a href="" target="_blank" class="btn-social btn-github"><i class="fa fa-github-alt"></i></a>
+      </div>
+      <br>
+    </section>
+  </body>
+</html>
